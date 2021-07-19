@@ -1,0 +1,32 @@
+<div class="container mt-3">
+  <div class="row" *ngFor="let e of listAll; index as i">
+    <div class="col">
+      <h1>{{ e.tappaOBJ.luogo }}</h1>
+      <br />
+      data: {{ e.tappaOBJ.dataTappa }}
+    </div>
+    <div class="col">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th scope="col">titolo pacchetto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let e of e.pacchettoObj">
+            <td>{{ e.id }}</td>
+            <td>{{ e.titolo }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <hr />
+  </div>
+  <div class="row">
+      <div class="col">
+          <button type="button" class="btn btn-primary" (click)="home()">home</button>
+      </div>
+  </div>
+</div>

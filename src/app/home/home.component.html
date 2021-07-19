@@ -1,0 +1,28 @@
+<div class="container mt-3">
+    <div class="row">
+      <div class="col">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">titolo</th>
+                <th scope="col">data partenza</th>
+                <th scope="col">data arrivo</th>
+                <th scope="col">luogo</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let e of listaAll; index as i">
+                <th>{{i+1}}</th>
+                <td>{{e.titolo}}</td>
+                <td>{{e.dataPartenza}}</td>
+                <td>{{e.dataArrivo}}</td>
+                <td>{{e.luogo}}</td>
+                <td><button type="button" class="btn btn-primary" (click)="redir(i+1)">info</button></td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
